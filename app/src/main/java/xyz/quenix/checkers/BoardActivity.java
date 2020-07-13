@@ -6,17 +6,16 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Toast;
 
-import xyz.quenix.checkers.methods.StatusBar;
+import xyz.quenix.checkers.methods.Render;
 
 public class BoardActivity extends AppCompatActivity {
 
     private Context context;
     private int orientation;
 
+    private Render render;
     private ConstraintLayout boardLayout;
 
     @Override
@@ -29,17 +28,23 @@ public class BoardActivity extends AppCompatActivity {
 
         boardLayout = findViewById(R.id.board_layout);
 
+        render = new Render();
+
         boardLayout.post(new Runnable() {
             @Override
             public void run() {
 
                 if (Configuration.ORIENTATION_PORTRAIT == orientation) {
                     boardLayout.getLayoutParams().height = boardLayout.getWidth();
+                    render.setItemsSize(boardLayout.getWidth());
                 } else {
                     boardLayout.getLayoutParams().width = boardLayout.getHeight();
+                    render.setItemsSize(boardLayout.getHeight());
                 }
 
                 boardLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+
+
 
                 Toast.makeText(context, boardLayout.getHeight() + "x" + boardLayout.getWidth() + "", Toast.LENGTH_LONG).show();
             }
