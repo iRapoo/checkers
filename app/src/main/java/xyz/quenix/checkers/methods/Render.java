@@ -3,6 +3,7 @@ package xyz.quenix.checkers.methods;
 import android.content.Context;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 
 /**
  * Класс отрисовки игрового поля и фигур
@@ -26,13 +27,19 @@ public class Render {
         return (allSlots - emptySlots) / 2;
     }
 
+    /**
+     * Расчет размеров одного слота на поле
+     *
+     * @param int size
+     * @return int
+     */
     public Render setItemsSize(int size) {
         itemSize = size / allSlots;
         return this;
     }
 
-    public Render board(Context context, ConstraintLayout renderZone) {
-
+    public Render push(Context context, ConstraintLayout renderZone) {
+        ConstraintSet set = new ConstraintSet();
 
         return this;
     }

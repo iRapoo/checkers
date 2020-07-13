@@ -44,7 +44,7 @@ public class BoardActivity extends AppCompatActivity {
 
                 boardLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
 
-
+                render.push(context, boardLayout);
 
                 Toast.makeText(context, boardLayout.getHeight() + "x" + boardLayout.getWidth() + "", Toast.LENGTH_LONG).show();
             }
