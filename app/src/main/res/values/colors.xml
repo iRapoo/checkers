@@ -3,4 +3,11 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+
+    <color name="boardBackground">#e9dbca</color>
+    <color name="boardSlots">#847565</color>
+
+    <color name="whiteItems">#FFFFFF</color>
+    <color name="blackItems">#000000</color>
+
 </resources>

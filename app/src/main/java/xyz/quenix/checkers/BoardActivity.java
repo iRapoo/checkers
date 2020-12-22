@@ -42,7 +42,7 @@ public class BoardActivity extends AppCompatActivity {
                     render.setItemsSize(boardLayout.getHeight());
                 }
 
-                boardLayout.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                boardLayout.setBackgroundColor(getResources().getColor(R.color.boardBackground));
 
                 render.push(context, boardLayout);
 
